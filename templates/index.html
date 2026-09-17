@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ScamShield | AI Scam Detection</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         NAVIGATION
+    =========================================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🛡️ ScamShield
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#about">About</a>
+        </div>
+
+    </nav>
+
+
+    <!-- ==========================================
+         MAIN CONTENT
+    =========================================== -->
+
+    <main class="hero">
+
+        <!-- Badge -->
+
+        <div class="badge">
+            🛡️ Stay Safe. Stay Protected.
+        </div>
+
+
+        <!-- Hero Heading -->
+
+        <h1>
+            Detect Scams Before
+            <br>
+            <span>They Detect You.</span>
+        </h1>
+
+
+        <p class="subtitle">
+            Analyze suspicious messages, emails and links
+            to identify potential scams and phishing attempts.
+        </p>
+
+
+        <!-- ==========================================
+             ANALYZER
+        =========================================== -->
+
+        <div class="analyzer-card">
+
+            <h2>
+                Analyze a Message
+            </h2>
+
+            <p>
+                Paste a suspicious message below and let
+                ScamShield identify potential warning signs.
+            </p>
+
+
+            <!-- Message Input -->
+
+            <textarea
+                id="messageInput"
+                placeholder="Paste a suspicious message here..."
+            ></textarea>
+
+
+            <!-- Demo Examples -->
+
+            <div class="example-section">
+
+                <div class="example-header">
+
+                    <span>
+                        TRY AN EXAMPLE
+                    </span>
+
+                    <small>
+                        Test ScamShield instantly
+                    </small>
+
+                </div>
+
+
+                <div class="example-buttons">
+
+                    <button
+                        type="button"
+                        class="example-button"
+                        data-message="Your SBI account will be blocked today. Verify your account immediately by clicking https://abc.tk/verify and enter your OTP."
+                    >
+                        🔐 Bank Phishing
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="example-button"
+                        data-message="Your payment has failed. Please send ₹499 immediately to complete the refund process."
+                    >
+                        💰 Payment Scam
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="example-button"
+                        data-message="Congratulations! You have won ₹25,00,000 in our lucky draw. Pay a processing fee of ₹999 to claim your reward today."
+                    >
+                        🎁 Fake Prize
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="example-button"
+                        data-message="URGENT: Your account will be suspended within 24 hours. Click here immediately to complete your KYC update."
+                    >
+                        🚨 Account Threat
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="example-button"
+                        data-message="Hey! Just checking in. Are we still meeting for coffee tomorrow at 5 PM?"
+                    >
+                        ✅ Safe Message
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Analyze Button -->
+
+            <button
+                id="analyzeButton"
+                type="button"
+            >
+                Analyze Message →
+            </button>
+
+
+            <!-- Result -->
+
+            <div
+                id="result"
+                class="result-card"
+            ></div>
+
+        </div>
+
+
+        <!-- ==========================================
+             FEATURES
+        =========================================== -->
+
+        <div
+            class="features"
+            id="how-it-works"
+        >
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🔍
+                </div>
+
+                <h3>
+                    Smart Detection
+                </h3>
+
+                <p>
+                    Identify suspicious patterns,
+                    scam indicators and social
+                    engineering signals.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    AI-Powered Analysis
+                </h3>
+
+                <p>
+                    Combine rule-based detection
+                    with AI-powered contextual analysis.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🔗
+                </div>
+
+                <h3>
+                    URL Intelligence
+                </h3>
+
+                <p>
+                    Analyze suspicious links and
+                    identify potentially risky URL patterns.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==========================================
+             ABOUT
+        =========================================== -->
+
+        <section
+            class="about-section"
+            id="about"
+        >
+
+            <p class="section-label">
+                ABOUT SCAMSHIELD
+            </p>
+
+            <h2>
+                Security intelligence for
+                everyday messages.
+            </h2>
+
+            <p>
+                ScamShield combines deterministic threat detection,
+                URL intelligence and AI-assisted analysis to help
+                users understand potentially suspicious messages.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
