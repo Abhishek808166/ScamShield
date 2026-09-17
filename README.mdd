@@ -1,0 +1,287 @@
+# 🛡️ ScamShield
+
+### AI-Powered Scam, Phishing & Suspicious Message Detection Platform
+
+ScamShield is a cybersecurity web application that analyzes suspicious messages and identifies potential scam, phishing, social-engineering, credential-theft, and suspicious-URL indicators.
+
+It combines **rule-based detection, URL intelligence, risk scoring, and AI-powered analysis** to provide users with an understandable security assessment.
+
+🔗 **Live Demo:** https://scamshield-3.onrender.com
+
+---
+
+## 🚀 Features
+
+### 🔍 Smart Scam Detection
+Identifies common scam patterns including:
+
+- Credential requests
+- Financial requests
+- Fake prizes and rewards
+- Urgency and pressure
+- Account threats
+- Suspicious links
+- Impersonation
+- Banking/KYC-related risks
+- Social engineering patterns
+
+### 🤖 AI Security Assessment
+
+ScamShield uses an AI analysis layer to provide:
+
+- Risk level
+- Confidence score
+- Detected intent
+- Security explanation
+- Safety recommendation
+
+### 🔗 URL Intelligence
+
+URLs inside messages are analyzed for suspicious characteristics such as:
+
+- HTTP instead of HTTPS
+- Suspicious or shortened domains
+- IP-address-based URLs
+- Excessive subdomains
+- Sensitive keywords such as login, verify, payment and OTP
+
+### 📊 Risk Scoring
+
+ScamShield combines multiple signals into an overall risk score from:
+
+**0 → 100**
+
+Risk levels:
+
+| Score | Classification |
+|------:|----------------|
+| 0 | Likely Safe |
+| 1–39 | Low Risk |
+| 40–69 | Medium Risk |
+| 70–100 | High Risk |
+
+### 📈 Scan Dashboard
+
+The application maintains a local scan history and displays:
+
+- Total scans
+- High-risk scans
+- Medium-risk scans
+- Safe scans
+- Recent scan activity
+
+---
+
+## 🧠 How It Works
+
+```text
+                    User Message
+                         │
+                         ▼
+                 ┌───────────────┐
+                 │   Flask API   │
+                 └───────┬───────┘
+                         │
+                         ▼
+              ┌─────────────────────┐
+              │ Scam Detection      │
+              │ Engine              │
+              └──────────┬──────────┘
+                         │
+             ┌───────────┼───────────┐
+             ▼           ▼           ▼
+       Rule-Based      URL          AI
+       Detection    Intelligence  Analysis
+             │           │           │
+             └───────────┼───────────┘
+                         ▼
+                  Risk Calculation
+                         │
+                         ▼
+                 Security Assessment
+                         │
+                         ▼
+                    User Result
+🛠️ Tech Stack
+Backend
+Python
+Flask
+Frontend
+HTML5
+CSS3
+JavaScript
+AI
+Hugging Face API
+AI-powered security analysis
+Deployment
+Render
+Development
+Visual Studio Code
+Git
+GitHub
+📂 Project Structure
+ScamShield/
+│
+├── app.py                  # Flask application
+├── detector.py             # Rule-based detection engine
+├── ai_analyzer.py          # AI security analysis
+├── requirements.txt        # Python dependencies
+├── Procfile                # Deployment configuration
+├── .gitignore              # Git ignored files
+│
+├── static/
+│   ├── style.css           # Application styling
+│   └── script.js           # Frontend logic
+│
+└── templates/
+    └── index.html          # Main interface
+⚙️ Installation
+1. Clone the repository
+git clone https://github.com/Abhishek808166/ScamShield.git
+2. Navigate into the project
+cd ScamShield
+3. Create a virtual environment
+python -m venv .venv
+4. Activate the environment
+macOS / Linux
+source .venv/bin/activate
+Windows
+.venv\Scripts\activate
+5. Install dependencies
+pip install -r requirements.txt
+🔐 Environment Variables
+
+ScamShield uses environment variables for API credentials.
+
+Create a .env file in the project root:
+
+HF_TOKEN=your_huggingface_token
+
+Never commit .env or API keys to GitHub.
+
+The .gitignore file already excludes:
+
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+▶️ Run Locally
+
+Start the Flask application:
+
+python app.py
+
+Then open:
+
+http://127.0.0.1:5001/
+🌐 Live Demo
+
+ScamShield is deployed and publicly accessible:
+
+👉 https://scamshield-3.onrender.com
+
+Try analyzing messages containing:
+
+OTP requests
+Banking warnings
+Fake prizes
+Urgent payment requests
+Suspicious links
+Account suspension threats
+🔌 API
+Analyze Message
+
+Endpoint
+
+POST /analyze
+Request
+{
+  "message": "Your account will be blocked. Verify your OTP immediately."
+}
+Response
+{
+  "score": 84,
+  "risk_level": "HIGH RISK",
+  "detected": []
+}
+
+The application may also return URL intelligence and AI security analysis depending on the message and configured services.
+
+🛡️ Security Considerations
+
+ScamShield is designed as a risk-assessment tool, not a definitive malware or fraud detector.
+
+A message being classified as safe does not guarantee that it is legitimate.
+
+Users should always:
+
+Avoid sharing OTPs or passwords
+Verify requests through official channels
+Avoid clicking unexpected links
+Check the sender carefully
+Never send money based solely on an unsolicited message
+⚠️ Limitations
+
+Current detection is based on a combination of predefined patterns, URL heuristics, and AI analysis.
+
+Possible limitations include:
+
+False positives
+False negatives
+Newly emerging scam patterns
+Context-dependent messages
+AI-generated analysis variability
+
+ScamShield should therefore be used as an additional security layer rather than a replacement for professional cybersecurity tools.
+
+🔮 Future Improvements
+
+Planned improvements include:
+
+📧 Email analysis
+📱 SMS analysis
+🌐 Browser extension
+🧠 Improved machine-learning classification
+🔎 Reputation-based URL intelligence
+📊 Advanced analytics dashboard
+👤 User accounts and cloud scan history
+🚨 Real-time threat intelligence
+🗄️ Database-backed scan history
+📱 Mobile application
+👨‍💻 Author
+
+Abhishek Sahani
+
+B.Tech — Computer Science & Engineering
+
+Interested in:
+
+Cybersecurity
+Artificial Intelligence
+Automation
+Software Development
+Business & Technology
+⭐ Support
+
+If you find ScamShield useful, consider giving the repository a ⭐ on GitHub.
+
+📄 Disclaimer
+
+ScamShield is an educational and portfolio cybersecurity project.
+
+It provides automated risk assessments and should not be considered a guaranteed determination that a message is malicious or legitimate.
+
+
+### Then commit it
+
+In the GitHub commit popup you're currently using:
+
+**Commit message:**
+
+```text
+Add professional README documentation
+
+Extended description:
+
+Added project overview, features, architecture, setup instructions, API documentation, security considerations, and live demo information.
