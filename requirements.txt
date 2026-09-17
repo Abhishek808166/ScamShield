@@ -1,4 +1,5 @@
 Flask
 python-dotenv
-openai
+huggingface_hub
 gunicorn
+requests
